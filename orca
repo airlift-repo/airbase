@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Pre-condition: 
+#   -- /opt/conda/bin/orca is installed by plotly/orca 
+#   -- the original executable "orca" has been renamed as "plotly-orca"
+#   -- xvfb has been installed
+   
+# This wrapper ("orca") is provided to enable plotly/orca to run in an environment
+# that has no X11 installation.
+
+xvfb-run /opt/conda/bin/plotly-orca "$@"
