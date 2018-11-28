@@ -46,6 +46,8 @@ RUN \
     pip3 install geoip2                         &&  \
     pip3 install dnspython
 
+USER root
+
 # Set up a wrapper for orca (see https://github.com/plotly/orca) in an X11-less environment
 
 RUN \
@@ -54,6 +56,8 @@ RUN \
 COPY orca /opt/conda/bin/orca
 
 RUN chmod a+x /opt/conda/bin/orca
+
+USER $NB_UID
 
 # 
 # $ docker build -t airbase/v1 .
