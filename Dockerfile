@@ -20,7 +20,8 @@ RUN     \
     apt-get install -y tshark                   && \
     apt-get install -y openjdk-11-jdk           && \
     apt-get install -y flex bison               && \
-    apt-get install -y python3-pip
+    apt-get install -y python3-pip              && \
+    apt-get install -y xvfb
 
 USER $NB_UID
 
