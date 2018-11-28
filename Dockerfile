@@ -32,9 +32,9 @@ RUN \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager    && \
     conda install -c plotly plotly              &&  \
     conda install -c plotly plotly-orca psutil poppler                  && \
+    conda install -c conda-forge python-cufflinks                       && \
     pip install --upgrade pip                   &&  \
     conda install --quiet --yes                     \
-        python-cufflinks                            \
         feather-format                              \
         networkx                                    \
         jupyter_kernel_gateway                  &&  \
