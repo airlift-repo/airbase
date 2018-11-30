@@ -21,6 +21,9 @@ RUN     \
     apt-get install -y openjdk-11-jdk           && \
     apt-get install -y flex bison               && \
     apt-get install -y python3-pip              && \
+    apt-get install -y libgtk2.0-0              && \
+    apt-get install -y libgconf-2-4             && \
+    apt-get install -y google-chrome-stable     && \
     apt-get install -y xvfb
 
 USER $NB_UID
