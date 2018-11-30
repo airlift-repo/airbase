@@ -31,6 +31,10 @@ RUN     \
 # for Orca
 #
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        gnupg curl ca-certificates xz-utils wget libgtk2.0-0 libgconf-2-4 \
+        && rm -rf /var/lib/apt/lists/* && apt-get clean
+
 RUN apt-get install -y libgtk2.0-0              && \
     apt-get install -y libgconf-2-4             && \
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
